@@ -11,26 +11,34 @@
   color: var(--color-gray-100);
 
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
 
   padding: 1rem;
 }
 
-.todoListItemCheckbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.todoListItem span {
+  flex: 1;
+  text-align: left;
+}
 
-  background-color: transparent;
-  border: 1px solid var(--color-gray-400);
-  border-radius: 4px;
+.todoListItemCheckbox {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  vertical-align: middle;
+
   cursor: pointer;
 
-  width: 24px;
-  height: 24px;
+  width: 17px;
+  height: 17px;
+}
 
-  transition: all 0.2s;
+.todoListItemCheckbox:checked + span {
+  color: var(--color-gray-300);
+  text-decoration: line-through;
 }
 
 .todoListItemButton {
